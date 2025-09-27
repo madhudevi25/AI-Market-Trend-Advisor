@@ -1,0 +1,117 @@
+{
+  "trend_analysis": {
+    "trending_keywords": [
+      [
+        "gaming",
+        5
+      ],
+      [
+        "game",
+        4
+      ],
+      [
+        "streaming",
+        3
+      ],
+      [
+        "play",
+        1
+      ],
+      [
+        "action",
+        1
+      ],
+      [
+        "adventure",
+        1
+      ],
+      [
+        "subscription",
+        1
+      ],
+      [
+        "cloud",
+        1
+      ],
+      [
+        "battle",
+        1
+      ],
+      [
+        "nintendo",
+        1
+      ]
+    ],
+    "market_sentiment": {
+      "score": 0.20116161616161615,
+      "interpretation": "Positive"
+    },
+    "data_freshness": "2025-09-27T04:31:42.302471",
+    "signal_strength": 15
+  },
+  "competitive_analysis": {
+    "competitor_landscape": {
+      "Sony PlayStation": {
+        "products": [
+          "Spider-Man 2"
+        ],
+        "activity_count": 1,
+        "avg_price": 69.99,
+        "focus_areas": [
+          "exclusive"
+        ]
+      },
+      "Microsoft Xbox": {
+        "products": [
+          "Game Pass Ultimate"
+        ],
+        "activity_count": 1,
+        "avg_price": 16.99,
+        "focus_areas": [
+          "subscription",
+          "cloud"
+        ]
+      },
+      "Valve": {
+        "products": [
+          "Steam Deck OLED"
+        ],
+        "activity_count": 1,
+        "avg_price": 549.99,
+        "focus_areas": [
+          "hardware"
+        ]
+      },
+      "Epic Games": {
+        "products": [
+          "Epic Games Store"
+        ],
+        "activity_count": 1,
+        "avg_price": 0,
+        "focus_areas": []
+      },
+      "Market Analysis": {
+        "products": [
+          "Nintendo Switch Analysis"
+        ],
+        "activity_count": 1,
+        "avg_price": 0,
+        "focus_areas": []
+      }
+    },
+    "market_leaders": [
+      "Sony PlayStation",
+      "Microsoft Xbox",
+      "Valve",
+      "Epic Games",
+      "Market Analysis"
+    ],
+    "analysis_timestamp": "2025-09-27T04:31:42.302599"
+  },
+  "data_summary": {
+    "total_records": 18,
+    "created_at": "2025-09-27T04:33:06.234423",
+    "enhanced_features": true,
+    "dynamic_bias_auditing": true
+  }
+}
