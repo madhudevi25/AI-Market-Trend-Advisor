@@ -20,18 +20,13 @@ from textblob import TextBlob
 import warnings
 
 # --- Load credentials from Streamlit secrets ---
-service_account_info = st.secrets["gcp_service_account"]
+# Load credentials from Streamlit secrets
+service_account_info = st.secrets["gcp_service_account"]  # matches [gcp_service_account] in secrets
 project_id = service_account_info["project_id"]
 
 credentials = service_account.Credentials.from_service_account_info(service_account_info)
-
-# --- Create your GCP client using these credentials ---
 bq_client = bigquery.Client(credentials=credentials, project=project_id)
 
-# --- Example usage: run a simple query ---
-query_job = bq_client.query("SELECT 'Hello from BigQuery' AS message")
-for row in query_job.result():
-    st.write(row.message)
 #-------------End Application Connection-----------
 warnings.filterwarnings('ignore')
 
