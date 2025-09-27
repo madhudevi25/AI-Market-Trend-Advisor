@@ -267,16 +267,9 @@ def initialize_enhanced_system():
             credentials=credentials  # ← This is the key fix!
         )
         
-        # Use stable model
-        #model = GenerativeModel("gemini-1.5-pro")
+        # Use stable model #model = GenerativeModel("gemini-1.5-pro")
         # Try different model names in order of preference
-model_names = [
-    "gemini-1.0-pro",           # Most stable
-    "gemini-pro",               # Alternative name
-    "text-bison@001",           # Backup PaLM model
-    "text-bison"                # Fallback
-]
-
+model_names = ["gemini-1.0-pro", "gemini-pro", "text-bison@001", "text-bison"]
 model = None
 for model_name in model_names:
     try:
