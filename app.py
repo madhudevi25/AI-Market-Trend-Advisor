@@ -248,7 +248,7 @@ def initialize_enhanced_system():
         )
         
         # Use the correct Gemini model name
-        model = GenerativeModel("gemini-1.5-pro")  # Changed from gemini-2.0-flash-exp
+        model = GenerativeModel("gemini-2.5-flash")  # Changed from gemini-2.0-flash-exp
         
         # Load embedding model
         embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
