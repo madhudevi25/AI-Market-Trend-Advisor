@@ -268,8 +268,28 @@ def initialize_enhanced_system():
         )
         
         # Use stable model
-        model = GenerativeModel("gemini-1.5-pro")
-        
+        #model = GenerativeModel("gemini-1.5-pro")
+        # Try different model names in order of preference
+model_names = [
+    "gemini-1.0-pro",           # Most stable
+    "gemini-pro",               # Alternative name
+    "text-bison@001",           # Backup PaLM model
+    "text-bison"                # Fallback
+]
+
+model = None
+for model_name in model_names:
+    try:
+        model = GenerativeModel(model_name)
+        st.success(f"✅ Using model: {model_name}")
+        break
+    except Exception as e:
+        st.warning(f"⚠️ Model {model_name} not available: {str(e)[:50]}...")
+        continue
+
+if model is None:
+    raise Exception("No available models found")
+    #------------------------------------------    
         # Load embedding model
         embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         
