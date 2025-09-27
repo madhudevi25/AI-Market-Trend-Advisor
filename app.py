@@ -238,28 +238,72 @@ class StreamlitDynamicBiasAuditor:
 
 @st.cache_resource
 def initialize_enhanced_system():
-    """Load enhanced system with dynamic bias auditing"""
+    """Load enhanced system with proper file handling"""
     
     try:
-        # Initialize Vertex AI with Gemini 2.0 Flash
+        # Initialize Vertex AI with corrected model name
         vertexai.init(
             project=st.secrets["gcp_project_id"],
             location="us-central1"
         )
         
-        # Load Gemini 2.0 Flash
-        model = GenerativeModel("gemini-2.0-flash-exp")
+        # Use the correct Gemini model name
+        model = GenerativeModel("gemini-1.5-pro")  # Changed from gemini-2.0-flash-exp
         
         # Load embedding model
         embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         
-        # Load processed data
-        processed_data = pd.read_parquet('processed_market_data.parquet')
-        faiss_index = faiss.read_index('market_faiss_index.faiss')
+        # FIXED: Load processed data with proper error handling
+        try:
+            processed_data = pd.read_parquet('processed_market_data.parquet')
+            st.success(f"✅ Loaded {len(processed_data)} data points")
+        except Exception as e:
+            st.error(f"❌ Error loading parquet file: {e}")
+            # Create sample data as fallback
+            processed_data = pd.DataFrame({
+                'id': ['sample_1', 'sample_2'],
+                'text': ['Nintendo Switch gaming console', 'Mario Kart racing game'],
+                'source': ['internal', 'internal'],
+                'type': ['nintendo_product', 'nintendo_product'],
+                'title': ['Nintendo Switch', 'Mario Kart 8']
+            })
+            st.warning("⚠️ Using sample data due to file loading error")
         
-        # Load analysis results
-        with open('market_analysis_results.json', 'r') as f:
-            analysis_results = json.load(f)
+        # FIXED: Load FAISS index with proper error handling
+        try:
+            faiss_index = faiss.read_index('market_faiss_index.faiss')
+            st.success("✅ FAISS index loaded")
+        except Exception as e:
+            st.error(f"❌ Error loading FAISS index: {e}")
+            # Create dummy index as fallback
+            import numpy as np
+            dummy_embeddings = np.random.random((len(processed_data), 384)).astype('float32')
+            faiss_index = faiss.IndexFlatIP(384)
+            faiss.normalize_L2(dummy_embeddings)
+            faiss_index.add(dummy_embeddings)
+            st.warning("⚠️ Using dummy FAISS index due to loading error")
+        
+        # FIXED: Load analysis results with proper error handling
+        try:
+            with open('market_analysis_results.json', 'r') as f:
+                analysis_results = json.load(f)
+            st.success("✅ Analysis results loaded")
+        except Exception as e:
+            st.error(f"❌ Error loading analysis results: {e}")
+            # Create sample analysis as fallback
+            analysis_results = {
+                'trend_analysis': {
+                    'trending_keywords': [('gaming', 10), ('nintendo', 8), ('console', 6)],
+                    'market_sentiment': {'score': 0.1, 'interpretation': 'Neutral'}
+                },
+                'competitive_analysis': {
+                    'competitor_landscape': {
+                        'Sony': {'activity_count': 3, 'products': ['PS5']},
+                        'Microsoft': {'activity_count': 2, 'products': ['Xbox']}
+                    }
+                }
+            }
+            st.warning("⚠️ Using sample analysis due to file loading error")
         
         # Initialize bias auditor
         bias_auditor = StreamlitDynamicBiasAuditor()
@@ -267,7 +311,8 @@ def initialize_enhanced_system():
         return model, embedding_model, processed_data, faiss_index, analysis_results, bias_auditor
         
     except Exception as e:
-        st.error(f"Error loading enhanced system: {e}")
+        st.error(f"❌ System initialization error: {e}")
+        st.info("💡 The app will run in demo mode")
         return None, None, None, None, None, None
 
 def enhanced_similarity_search(query, embedding_model, faiss_index, processed_data, top_k=8):
