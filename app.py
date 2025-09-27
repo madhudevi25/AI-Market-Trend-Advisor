@@ -4,6 +4,7 @@
 # ===============================
 
 import streamlit as st
+from google.oauth2 import service_account
 import pandas as pd
 import numpy as np
 import faiss
