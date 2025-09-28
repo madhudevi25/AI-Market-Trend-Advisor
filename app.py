@@ -35,7 +35,7 @@ except ImportError:
 
 # Page configuration
 st.set_page_config(
-    page_title="🎮 Nintendo AI Market Trend Advisor",
+    page_title="🎮 AI Nintendo (Kaggle Data) Market Trend Advisor",
     page_icon="🎮",
     layout="wide",
     initial_sidebar_state="expanded"
