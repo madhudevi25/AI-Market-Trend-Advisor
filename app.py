@@ -541,9 +541,9 @@ def main():
     st.markdown(
     """
     **AI Market Trend Advisor** is a demo platform that enables executives and product teams to query market trends, benchmark products, and receive bias-audited recommendations.  
-    - Demo uses **Nintendo Kaggle dataset** as an example  
-    - Platform is **dataset-agnostic** (works with healthcare, finance, SaaS, etc.)  
-    - Built with **Streamlit, GCP BigQuery, FAISS, Gemini-2.5-Flash**  
+    - Demo uses Nintendo Kaggle dataset as an example  
+    - Platform is dataset-agnostic (works with healthcare, finance, SaaS, etc.)  
+    - Built with Streamlit, GCP BigQuery, FAISS, Gemini-2.5-Flash 
     - Responses are checked with a built-in **Bias & Fairness Auditor** for transparency
     """)
     st.markdown("---")  # adds a separator line
