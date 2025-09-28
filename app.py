@@ -543,13 +543,8 @@ def main():
     if model is None:
         st.error("Failed to load AI systems. Please check configuration.")
         return
-  
-    # Status indicators
-    col5 = st.columns(5)
-    with col5:
-        libraries_status = "✅ Full" if DYNAMIC_AUDITING else "⚠️ Partial"
-        st.info(f"📚 Libraries: {libraries_status}")
-  
+  #----------------------Removed repetitive information from displaying to UI--------
+  #--------------------------------------------------------------------------------
     # Sidebar
     with st.sidebar:
         st.header("📊 Enhanced Features")
