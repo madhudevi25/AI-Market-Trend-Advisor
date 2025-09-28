@@ -21,10 +21,16 @@ import warnings
 import os
 #---------------------------Application Login-----------------
 
-# --- Simple Auth Setup ---
-name = ["Demo User"]
 usernames = ["demo_user"]
-passwords = ["password"]
+passwords = ["demo_pass"]
+
+# Hash the password once (safe for MVP)
+hashed_passwords = stauth.Hasher(["demo_pass"]).generate()
+
+authenticator = stauth.Authenticate(
+    ["Demo User"], usernames, hashed_passwords,
+    "ai_market_trend", "abcdef", cookie_expiry_days=1
+)
 
 name, authentication_status, username = authenticator.login("Login", "main")
 
