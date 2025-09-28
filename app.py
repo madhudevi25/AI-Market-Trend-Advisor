@@ -550,7 +550,7 @@ def main():
     st.markdown("---")  # adds a separator line
     # Load system
     st.markdown(
-    """ System Healthcheck """)
+    """ **System Healthcheck** """)
     with st.spinner("🧠 Loading enhanced AI system..."):
         model, embedding_model, processed_data, faiss_index, analysis_results, bias_auditor = initialize_enhanced_system()
     
