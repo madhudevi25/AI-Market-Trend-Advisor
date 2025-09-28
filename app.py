@@ -547,7 +547,7 @@ def main():
     - Responses are checked with a built-in **Bias & Fairness Auditor** for transparency
     """)
    #---------------------
-    
+    st.markdown("---")  # adds a separator line
     # Load system
     with st.spinner("🧠 Loading enhanced AI system..."):
         model, embedding_model, processed_data, faiss_index, analysis_results, bias_auditor = initialize_enhanced_system()
@@ -561,7 +561,7 @@ def main():
     with st.sidebar:
         st.header("📊 Enhanced Features")
         
-        st.markdown("### 🧠 AI Model - Kaggle Data")
+        st.markdown("### 🧠 AI Model")
         st.success("🚀 **Gemini 2.5 Flash**")
         #st.info("💰 **85% Cost Reduction**")
         
