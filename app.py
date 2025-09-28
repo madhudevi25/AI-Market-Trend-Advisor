@@ -393,8 +393,8 @@ def generate_enhanced_response(query, model, search_results, analysis_results):
         response = model.generate_content(
             prompt,
             generation_config={
-                "max_output_tokens": 1500,
-                "temperature": 0.8,
+                "max_output_tokens": 3500,
+                "temperature": 0.4,
                 "top_p": 0.95,
                 "top_k": 32,
             }
