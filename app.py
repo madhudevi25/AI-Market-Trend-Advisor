@@ -547,9 +547,8 @@ def main():
     - Platform is **dataset-agnostic** (works with healthcare, finance, SaaS, etc.)  
     - Built with **Streamlit, GCP BigQuery, FAISS, Gemini-2.5-Flash**  
     - Responses are checked with a built-in **Bias & Fairness Auditor** for transparency
-    """
-)
-st.markdown("---")  # adds a separator line
+    """)
+    st.markdown("---")  # adds a separator line
     #---------------------
     
     # Load system
