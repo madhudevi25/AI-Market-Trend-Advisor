@@ -543,21 +543,13 @@ def main():
     if model is None:
         st.error("Failed to load AI systems. Please check configuration.")
         return
-   """ 
+  
     # Status indicators
-    col1, col2, col3, col4, col5 = st.columns(5)
-    with col1:
-        st.success("✅ AI System Ready")
-    with col2:
-        st.info(f"📊 {len(processed_data)} Data Points")
-    with col3:
-        st.info("🚀 Gemini 2.5 Flash")
-    with col4:
-        st.info("🛡️ Dynamic Auditor")
+    col5 = st.columns(5)
     with col5:
         libraries_status = "✅ Full" if DYNAMIC_AUDITING else "⚠️ Partial"
         st.info(f"📚 Libraries: {libraries_status}")
-    """
+  
     # Sidebar
     with st.sidebar:
         st.header("📊 Enhanced Features")
