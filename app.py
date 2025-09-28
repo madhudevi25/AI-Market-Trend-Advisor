@@ -546,8 +546,7 @@ def main():
     - Built with Streamlit, GCP BigQuery, FAISS, Gemini-2.5-Flash 
     - Responses are checked with a built-in **Bias & Fairness Auditor** for transparency
     """)
-    st.markdown("---")  # adds a separator line
-    #---------------------
+   #---------------------
     
     # Load system
     with st.spinner("🧠 Loading enhanced AI system..."):
