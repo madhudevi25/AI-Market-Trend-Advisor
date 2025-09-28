@@ -185,20 +185,10 @@ def load_authentication_config():
         return {
             'credentials': {
                 'usernames': {
-                    'admin': {
-                        'email': 'admin@company.com',
-                        'name': 'System Admin',
-                        'password': '$2b$12$gWNqxMgKl1YHgLlYt5YdqOGN3lUhQnT5HdlNOBvB9YsH7KmXyOkWS'  # password: admin123
-                    },
-                    'demo': {
-                        'email': 'demo@company.com', 
+                 'demo': {
+                        'email': 'mddm.linkedin@gmail.com', 
                         'name': 'Demo User',
                         'password': '$2b$12$L1h5l4sA3zK2m5nP7qR8teSMhF3gV1bJ9aK0lP2cD5rE8wX4yT6uO'  # password: demo123
-                    },
-                    'executive': {
-                        'email': 'ceo@company.com',
-                        'name': 'Executive User', 
-                        'password': '$2b$12$M2j6m5sB4aL3n6oQ8rS9ufTNiG4hW2cK0bL1mQ3dE6sF9xY5zU7vP'  # password: exec123
                     }
                 }
             },
@@ -207,7 +197,7 @@ def load_authentication_config():
                 'key': 'random_signature_key_12345',
                 'expiry_days': 30
             },
-            'preauthorized': ['admin@company.com']
+            
         }
 
 def initialize_authenticator():
