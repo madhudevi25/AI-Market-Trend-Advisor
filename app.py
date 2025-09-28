@@ -549,9 +549,9 @@ def main():
     with st.sidebar:
         st.header("📊 Enhanced Features")
         
-        st.markdown("### 🧠 AI Model")
+        st.markdown("### 🧠 AI Model using Nintendo Data from Kaggle")
         st.success("🚀 **Gemini 2.5 Flash**")
-        st.info("💰 **85% Cost Reduction**")
+        #st.info("💰 **85% Cost Reduction**")
         
         st.markdown("### 🛡️ Responsible AI")
         st.success("✅ Dynamic Bias Auditing")
