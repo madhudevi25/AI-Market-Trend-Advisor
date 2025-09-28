@@ -5,6 +5,7 @@
 # ===============================
 
 import streamlit as st
+import streamlit_authenticator as stauth
 import pandas as pd
 import numpy as np
 import faiss
@@ -18,6 +19,32 @@ import plotly.graph_objects as go
 from textblob import TextBlob
 import warnings
 import os
+#---------------------------Application Login-----------------
+
+# --- Simple Auth Setup ---
+usernames = ["demo_user"]
+passwords = ["demo_pass"]
+
+# Hash the password once (safe for MVP)
+hashed_passwords = stauth.Hasher(passwords).generate()
+
+authenticator = stauth.Authenticate(
+    ["Demo User"], usernames, hashed_passwords,
+    "ai_market_trend", "abcdef", cookie_expiry_days=1
+)
+
+name, authentication_status, username = authenticator.login("Login", "main")
+
+if authentication_status:
+    st.sidebar.success(f"Welcome {name} 👋")
+    # --- your existing app code continues below ---
+elif authentication_status is False:
+    st.error("Invalid username or password")
+    st.stop()
+elif authentication_status is None:
+    st.warning("Please enter your username and password")
+    st.stop()
+#----------------------------------------------
 
 # FIXED: Proper imports for authentication
 from google.oauth2 import service_account
