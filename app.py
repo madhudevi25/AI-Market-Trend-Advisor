@@ -22,11 +22,12 @@ import os
 #---------------------------Application Login-----------------
 
 # --- Simple Auth Setup ---
+name = ["Demo User"]
 usernames = ["demo_user"]
-passwords = ["password"]
+#passwords = ["password"]
 
 # Hash the password once (safe for MVP)
-hashed_passwords = stauth.Hasher(passwords).generate()
+hashed_passwords = stauth.Hasher(["demo_pass"]).generate()
 
 authenticator = stauth.Authenticate(
     ["Demo User"], usernames, hashed_passwords,
