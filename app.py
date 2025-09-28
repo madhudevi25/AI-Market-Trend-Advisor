@@ -663,7 +663,7 @@ def main():
         f"""
         <div style='text-align: center; color: #666; background: #f8f9fa; padding: 1rem; border-radius: 8px;'>
         <div style='color: #2c3e50; font-size: 1.1em; margin-bottom: 0.8rem; line-height: 1.4;'>
-                <em>About Me: I help organizations cut weeks of market research into minutes with a responsible AI accelerator that blends real-time insights with built-in bias and fairness auditing. My focus: turning GenAI from a concept into a trusted, decision-ready solution executives can actually use.</em>
+                <em>**About Me**: I help organizations cut weeks of market research into minutes with a responsible AI accelerator that blends real-time insights with built-in bias and fairness auditing. My focus: turning GenAI from a concept into a trusted, decision-ready solution executives can actually use.</em>
             </div>
             <strong>🎮 Gaming Product Strategic Intelligence System</strong><br>
                       📐 Fairlearn • 🔍 AIF360 • 🛡️ ML Safety • 🧮 Vector Search<br>
