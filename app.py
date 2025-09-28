@@ -22,7 +22,6 @@ import os
 #---------------------------Application Login-----------------
 
 usernames = ["demo_user"]
-#passwords = ["demo_pass"]
 
 # Hash the password once (safe for MVP)
 hashed_passwords = stauth.Hasher(["demo_pass"]).generate()
