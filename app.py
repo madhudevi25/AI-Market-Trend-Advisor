@@ -27,7 +27,7 @@ usernames = ["demo_user"]
 #passwords = ["password"]
 
 # Hash the password once (safe for MVP)
-hashed_passwords = stauth.Hasher(demo_pass).generate()
+hashed_passwords = stauth.Hasher("demopass").generate()
 
 authenticator = stauth.Authenticate(
     ["Demo User"], usernames, hashed_passwords,
