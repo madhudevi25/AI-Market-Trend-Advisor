@@ -30,7 +30,7 @@ passwords = ["password"]
 #hashed_passwords = stauth.Hasher("demopass").generate()
 
 authenticator = stauth.Authenticate(
-    ["Demo User"], usernames, hashed_passwords,
+    ["Demo User"], usernames, passwords,
     "ai_market_trend", "abcdef", cookie_expiry_days=1
 )
 
