@@ -664,9 +664,9 @@ def main():
         f"""
         <div style='text-align: center; color: #666; background: #f8f9fa; padding: 1rem; border-radius: 8px;'>
             <strong>🎮 Nintendo Strategic Intelligence System</strong><br>
-            🧠 <strong>Gemini 2.5 Flash</strong> (85% cost reduction) • 🛡️ <strong>Dynamic Bias Auditing</strong><br>
+         #   🧠 <strong>Gemini 2.5 Flash</strong> (85% cost reduction) • 🛡️ <strong>Dynamic Bias Auditing</strong><br>
             📐 Fairlearn • 🔍 AIF360 • 🛡️ ML Safety • 🧮 Vector Search<br>
-            <strong>Repository:</strong> madhudevi25/AI-Market-Trend-Advisor
+          #  <strong>Repository:</strong> madhudevi25/AI-Market-Trend-Advisor
         </div>
         """,
         unsafe_allow_html=True
