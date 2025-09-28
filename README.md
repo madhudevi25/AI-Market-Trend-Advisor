@@ -1,5 +1,5 @@
 # AI-Market-Trend-Advisor
-# 🎮 Nintendo AI Market Trend Advisor
+# This demo uses the Nintendo Kaggle dataset as an example. The platform is dataset-agnostic and can be adapted for other industries or companies.
 
 **Strategic Intelligence System with Bias & Fairness Auditing**
 
