@@ -26,14 +26,6 @@ name = ["Demo User"]
 usernames = ["demo_user"]
 passwords = ["password"]
 
-# Hash the password once (safe for MVP)
-#hashed_passwords = stauth.Hasher("demopass").generate()
-
-authenticator = stauth.Authenticate(
-    ["Demo User"], usernames, passwords,
-    "ai_market_trend", "abcdef", cookie_expiry_days=1
-)
-
 name, authentication_status, username = authenticator.login("Login", "main")
 
 if authentication_status:
