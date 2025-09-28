@@ -19,30 +19,6 @@ import plotly.graph_objects as go
 from textblob import TextBlob
 import warnings
 import os
-#---------------------------Application Login-----------------
-
-usernames = ["demo_user"]
-
-# Hash the password once (safe for MVP)
-hashed_passwords = stauth.Hasher(["demo_pass"]).generate()
-
-authenticator = stauth.Authenticate(
-    ["Demo User"], usernames, hashed_passwords,
-    "ai_market_trend", "abcdef", cookie_expiry_days=1
-)
-
-name, authentication_status, username = authenticator.login("Login", "main")
-
-if authentication_status:
-    st.sidebar.success(f"Welcome {name} 👋")
-    # --- your existing app code continues below ---
-elif authentication_status is False:
-    st.error("Invalid username or password")
-    st.stop()
-elif authentication_status is None:
-    st.warning("Please enter your username and password")
-    st.stop()
-#----------------------------------------------
 
 # FIXED: Proper imports for authentication
 from google.oauth2 import service_account
@@ -560,6 +536,21 @@ def main():
     # Header
     st.title("🎮 AI Market Trend Advisor")
     st.markdown("**Enhanced with Dynamic Bias & Fairness Auditing**")
+    
+    #---------About-----------
+    st.markdown(
+    """
+    **AI Market Trend Advisor** is a demo platform that enables executives and product teams to  
+    query market trends, benchmark products, and receive bias-audited recommendations.  
+
+    - Demo uses **Nintendo Kaggle dataset** as an example  
+    - Platform is **dataset-agnostic** (works with healthcare, finance, SaaS, etc.)  
+    - Built with **Streamlit, GCP BigQuery, FAISS, Gemini-2.5-Flash**  
+    - Responses are checked with a built-in **Bias & Fairness Auditor** for transparency
+    """
+)
+st.markdown("---")  # adds a separator line
+    #---------------------
     
     # Load system
     with st.spinner("🧠 Loading enhanced AI system..."):
