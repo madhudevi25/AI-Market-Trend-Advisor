@@ -35,7 +35,7 @@ except ImportError:
 
 # Page configuration
 st.set_page_config(
-    page_title="🎮 AI Nintendo (Kaggle Data) Market Trend Advisor",
+    page_title="AI Market Trend Advisor",
     page_icon="🎮",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -394,7 +394,7 @@ def generate_enhanced_response(query, model, search_results, analysis_results):
             prompt,
             generation_config={
                 "max_output_tokens": 3500,
-                "temperature": 0.4,
+                "temperature": 0.3,
                 "top_p": 0.95,
                 "top_k": 32,
             }
@@ -533,7 +533,7 @@ def main():
     """Enhanced main application"""
     
     # Header
-    st.title("🎮 Nintendo AI Market Trend Advisor")
+    st.title("🎮 AI Market Trend Advisor")
     st.markdown("**Enhanced with Dynamic Bias & Fairness Auditing**")
     
     # Load system
