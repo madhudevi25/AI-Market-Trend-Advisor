@@ -447,7 +447,36 @@ Based on current market intelligence data and competitive positioning analysis.
 
 def display_enhanced_transparency_dashboard(audit_results):
     """Display enhanced transparency dashboard"""
-    
+    #-----------------reduced font size-----------------
+    # Custom CSS for smaller fonts
+    st.markdown("""
+    <style>
+    .metric-container {
+        text-align: center;
+        padding: 0.5rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        margin: 0.2rem;
+    }
+    .metric-title {
+        font-size: 0.75rem;
+        color: #666;
+        margin-bottom: 0.2rem;
+        font-weight: 500;
+    }
+    .metric-value {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
+    .metric-value.excellent { color: #28a745; }
+    .metric-value.good { color: #ffc107; }
+    .metric-value.warning { color: #fd7e14; }
+    .metric-value.danger { color: #dc3545; }
+    </style>
+    """, unsafe_allow_html=True)
+ #------------------------------------------------   
     st.markdown("### 🛡️ Dynamic Bias & Fairness Assessment")
     
     # Overall metrics
