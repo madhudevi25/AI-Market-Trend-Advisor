@@ -698,6 +698,7 @@ def main():
             </div>
             <strong>🎮 Product Strategic Intelligence System</strong><br>
                       📐 Fairlearn • 🔍 AIF360 • 🛡️ ML Safety • 🧮 Vector Search<br>
+                      For demonstration purposes only — prototype by Madhu Devi
         </div>
         """,
         unsafe_allow_html=True
