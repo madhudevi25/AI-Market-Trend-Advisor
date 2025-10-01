@@ -693,12 +693,12 @@ def main():
     st.markdown(
         f"""
         <div style='text-align: center; color: #666; background: #f8f9fa; padding: 1rem; border-radius: 8px;'>
-        <div style='color: #2c3e50; font-size: 1.1em; margin-bottom: 0.8rem; line-height: 1.4;'> For demonstration purposes only — prototype by Madhu Devi
+        <div style='color: #2c3e50; font-size: 1.1em; margin-bottom: 0.8rem; line-height: 1.4;'>
                 <b>About Me</b>: I help CEOs and Founders to make data driven decisions. My focus: To turn GenAI from a concept into a trusted, decision-ready solution executives can actually use.
             </div>
             <strong>🎮 Product Strategic Intelligence System</strong><br>
                       📐 Fairlearn • 🔍 AIF360 • 🛡️ ML Safety • 🧮 Vector Search<br>
-                
+                <br>For demonstration purposes only — prototype by Madhu Devi</br>
         </div>
         """,
         unsafe_allow_html=True
