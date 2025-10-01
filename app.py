@@ -698,8 +698,8 @@ def main():
             </div>
             <strong>🎮 Product Strategic Intelligence System</strong><br>
                       📐 Fairlearn • 🔍 AIF360 • 🛡️ ML Safety • 🧮 Vector Search<br>
-                <br>This prototype is for demonstration purposes only.<br>
-                While bias and transparency audits are applied, AI outputs may still contain errors or limitations and should not be taken as definitive business advice.
+                <br>Disclaimer: For demonstration purposes only.<br>
+                Standard Generative AI limitations apply—outputs may contain errors and should not be relied on as definitive business advice.
                 </br>
         </div>
         """,
